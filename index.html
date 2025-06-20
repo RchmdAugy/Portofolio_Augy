@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Mahasiswa - [Nama Anda]</title>
+  <meta name="description" content="Portofolio Mahasiswa yang menguasai HTML, CSS, JS, dan SQL.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss-jit-cdn"></script>
+</head>
+<body class="bg-black text-white min-h-screen font-sans">
+  <header class="py-6 border-b border-gray-800">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-3xl font-bold">[Nama Anda]</h1>
+      <nav>
+        <ul class="flex gap-6 text-lg">
+          <li><a href="#about" class="hover:text-gray-400">Tentang</a></li>
+          <li><a href="#skills" class="hover:text-gray-400">Keahlian</a></li>
+          <li><a href="#projects" class="hover:text-gray-400">Proyek</a></li>
+          <li><a href="#contact" class="hover:text-gray-400">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 py-12">
+    <!-- Section: Tentang -->
+    <section id="about" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Tentang Saya</h2>
+      <p class="text-gray-300 max-w-2xl">Saya adalah mahasiswa yang memiliki minat di bidang web development, menguasai HTML, CSS, JavaScript, dan SQL. Saya suka membangun aplikasi web yang modern, responsif, dan fungsional.</p>
+    </section>
+    <!-- Section: Keahlian -->
+    <section id="skills" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Keahlian</h2>
+      <ul class="flex flex-wrap gap-4">
+        <li class="bg-gray-800 px-4 py-2 rounded">HTML</li>
+        <li class="bg-gray-800 px-4 py-2 rounded">CSS</li>
+        <li class="bg-gray-800 px-4 py-2 rounded">JavaScript</li>
+        <li class="bg-gray-800 px-4 py-2 rounded">SQL</li>
+      </ul>
+    </section>
+    <!-- Section: Proyek -->
+    <section id="projects" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Proyek</h2>
+      <div id="project-list" class="grid md:grid-cols-2 gap-8">
+        <!-- Proyek akan diisi oleh JS -->
+      </div>
+    </section>
+    <!-- Section: Kontak -->
+    <section id="contact">
+      <h2 class="text-2xl font-semibold mb-4">Kontak</h2>
+      <form id="contact-form" class="max-w-lg space-y-4">
+        <input type="text" name="nama" placeholder="Nama" required class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-white">
+        <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-white">
+        <textarea name="pesan" placeholder="Pesan" required class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-white"></textarea>
+        <button type="submit" class="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-200">Kirim</button>
+      </form>
+      <div id="form-message" class="mt-4 text-green-400 hidden">Pesan berhasil dikirim!</div>
+    </section>
+  </main>
+  <footer class="py-6 border-t border-gray-800 text-center text-gray-500">
+    &copy; 2025 [Nama Anda]. Dibuat dengan HTML, TailwindCSS, dan JavaScript.
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html> 
