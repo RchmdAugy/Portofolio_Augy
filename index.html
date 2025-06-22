@@ -3,63 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Mahasiswa - [Nama Anda]</title>
-  <meta name="description" content="Portofolio Mahasiswa yang menguasai HTML, CSS, JS, dan SQL.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/tailwindcss-jit-cdn"></script>
+  <title>Portofolio Rachmad Augy</title>
+  <meta name="description" content="Portofolio Mahasiswa yang menguasai HTML, CSS, JS, PHP, dan SQL.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="custom.css">
 </head>
-<body class="bg-black text-white min-h-screen font-sans">
-  <header class="py-6 border-b border-gray-800">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-3xl font-bold">[Nama Anda]</h1>
-      <nav>
-        <ul class="flex gap-6 text-lg">
-          <li><a href="#about" class="hover:text-gray-400">Tentang</a></li>
-          <li><a href="#skills" class="hover:text-gray-400">Keahlian</a></li>
-          <li><a href="#projects" class="hover:text-gray-400">Proyek</a></li>
-          <li><a href="#contact" class="hover:text-gray-400">Kontak</a></li>
+
+<body class="bg-primary text-slate-300 min-h-screen font-poppins">
+
+  <header class="sticky top-0 z-50 py-4 border-b border-white/10 backdrop-blur-md">
+    <div class="w-full max-w-6xl mx-auto flex justify-between items-center px-4">
+      
+      <div>
+        <h1 class="text-2xl font-bold text-white">Rachmad Augy</h1>
+        <p class="text-sm text-slate-400">Mahasiswa & Web Developer</p>
+      </div>
+
+      <div class="md:hidden">
+        <button id="hamburger-button" class="text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="hidden md:block">
+        <ul class="flex gap-8 text-md">
+          <li><a href="#about" class="hover:text-cyan-400 transition-colors">Tentang</a></li>
+          <li><a href="#skills" class="hover:text-cyan-400 transition-colors">Keahlian</a></li>
+          <li><a href="#projects" class="hover:text-cyan-400 transition-colors">Proyek</a></li>
+          <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Kontak</a></li>
         </ul>
       </nav>
+
     </div>
-  </header>
-  <main class="container mx-auto px-4 py-12">
-    <!-- Section: Tentang -->
-    <section id="about" class="mb-16">
-      <h2 class="text-2xl font-semibold mb-4">Tentang Saya</h2>
-      <p class="text-gray-300 max-w-2xl">Saya adalah mahasiswa yang memiliki minat di bidang web development, menguasai HTML, CSS, JavaScript, dan SQL. Saya suka membangun aplikasi web yang modern, responsif, dan fungsional.</p>
-    </section>
-    <!-- Section: Keahlian -->
-    <section id="skills" class="mb-16">
-      <h2 class="text-2xl font-semibold mb-4">Keahlian</h2>
-      <ul class="flex flex-wrap gap-4">
-        <li class="bg-gray-800 px-4 py-2 rounded">HTML</li>
-        <li class="bg-gray-800 px-4 py-2 rounded">CSS</li>
-        <li class="bg-gray-800 px-4 py-2 rounded">JavaScript</li>
-        <li class="bg-gray-800 px-4 py-2 rounded">SQL</li>
-      </ul>
-    </section>
-    <!-- Section: Proyek -->
-    <section id="projects" class="mb-16">
-      <h2 class="text-2xl font-semibold mb-4">Proyek</h2>
-      <div id="project-list" class="grid md:grid-cols-2 gap-8">
-        <!-- Proyek akan diisi oleh JS -->
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
+        <a href="#about" class="block text-slate-300 hover:text-cyan-400 rounded-md py-2">Tentang</a>
+        <a href="#skills" class="block text-slate-300 hover:text-cyan-400 rounded-md py-2">Keahlian</a>
+        <a href="#projects" class="block text-slate-300 hover:text-cyan-400 rounded-md py-2">Proyek</a>
+        <a href="#contact" class="block text-slate-300 hover:text-cyan-400 rounded-md py-2">Kontak</a>
+    </div>
+</header>
+
+  <main class="w-full max-w-6xl mx-auto px-4 py-12">
+
+    <section class="relative flex flex-col items-center justify-center text-center pt-16 pb-20 md:pt-24 md:pb-24" id="hero">
+      <img src="img/profile.jpeg" alt="Foto Profil Rachmad Augy" class="w-40 h-40 md:w-56 md:h-56 object-cover mb-6 animate-float rounded-full shadow-2xl shadow-cyan-500/20" data-aos="fade-down">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-3 animate-text-gradient bg-gradient-to-r from-white via-slate-300 to-cyan-400" data-aos="fade-up">
+        Rachmad Augy
+      </h1>
+      <p class="text-base md:text-xl text-slate-300 mb-8 max-w-2xl" data-aos="fade-up" data-aos-delay="200">
+        Mahasiswa & Pengembang Web dengan fokus pada HTML, CSS, JavaScript, PHP, dan SQL.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+          <a href="#contact" class="inline-block bg-slate-700 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-slate-600 transition-all transform hover:scale-105">
+            Hubungi Saya
+          </a>
       </div>
     </section>
-    <!-- Section: Kontak -->
-    <section id="contact">
-      <h2 class="text-2xl font-semibold mb-4">Kontak</h2>
-      <form id="contact-form" class="max-w-lg space-y-4">
-        <input type="text" name="nama" placeholder="Nama" required class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-white">
-        <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-white">
-        <textarea name="pesan" placeholder="Pesan" required class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-white"></textarea>
-        <button type="submit" class="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-200">Kirim</button>
-      </form>
-      <div id="form-message" class="mt-4 text-green-400 hidden">Pesan berhasil dikirim!</div>
+
+    <section id="about" class="py-12 md:py-16" data-aos="fade-up">
+        <h2 class="section-title text-3xl md:text-4xl">Tentang Saya</h2>
+        <p class="max-w-3xl mx-auto text-center text-base md:text-lg text-slate-400">
+            Saya adalah seorang mahasiswa dengan minat mendalam pada pengembangan web. Keahlian utama saya meliputi HTML, CSS, JavaScript, PHP, dan SQL. Saya bersemangat dalam membangun aplikasi web yang modern, responsif, dan fungsional untuk memberikan pengalaman pengguna yang luar biasa.
+        </p>
+    </section>
+
+    <section id="skills" class="py-12 md:py-16" data-aos="fade-up">
+        <h2 class="section-title text-3xl md:text-4xl">Keahlian Teknisi</h2>
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+            <div class="skill-card">
+                <img src="img/logo-html.png" alt="Logo HTML5" class="h-8 w-8 object-contain">
+                <span class="font-semibold">HTML5</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/logo-css.png" alt="Logo CSS3" class="h-8 w-8 object-contain">
+                <span class="font-semibold">CSS3</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/logo-js.png" alt="Logo JavaScript" class="h-8 w-8 object-contain">
+                <span class="font-semibold">JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/logo-php.png" alt="Logo PHP" class="h-8 w-8 object-contain">
+                <span class="font-semibold">PHP</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/logo-mysql.png" alt="Logo MySQL" class="h-8 w-8 object-contain">
+                <span class="font-semibold">MySQL</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-12 md:py-16" data-aos="fade-up">
+        <h2 class="section-title text-3xl md:text-4xl">Proyek Pilihan</h2>
+        <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            </div>
+    </section>
+
+    <section id="testimonial" class="py-12 md:py-16" data-aos="fade-up">
+        <div class="glass-card max-w-3xl mx-auto p-6 md:p-12 text-center">
+            <p class="text-lg md:text-2xl italic text-slate-300 mb-6">
+                "Belajar web development itu seru banget, apalagi kalau bisa bikin karya sendiri yang bermanfaat dan terlihat keren!"
+            </p>
+            <div class="flex items-center justify-center gap-4">
+                <img src="img/profile.jpeg" alt="Foto Profil" class="w-12 h-12 rounded-full border-2 border-cyan-400 object-cover">
+                <div>
+                    <div class="font-bold text-white">Rachmad Augy</div>
+                    <div class="text-slate-400 text-sm">Mahasiswa & Web Developer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-12 md:py-16" data-aos="fade-up">
+        <h2 class="section-title text-3xl md:text-4xl">Hubungi Saya</h2>
+        <form id="contact-form" action="https://formspree.io/f/mnnvgqqg" method="POST" class="max-w-xl mx-auto space-y-4">
+            <div>
+                <label for="nama" class="sr-only">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Anda" required class="contact-input">
+            </div>
+            <div>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email Anda" required class="contact-input">
+            </div>
+            <div>
+                <label for="pesan" class="sr-only">Pesan</label>
+                <textarea name="pesan" id="pesan" placeholder="Pesan Anda" rows="5" required class="contact-input"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-cyan-500 text-black font-bold px-6 py-3 rounded-lg shadow-lg shadow-cyan-500/30 hover:bg-cyan-400 transition-all transform hover:scale-105">
+                Kirim Pesan
+            </button>
+        </form>
+        <div id="form-message" class="mt-4 text-center text-green-400 hidden">Pesan berhasil dikirim! Terima kasih.</div>
     </section>
   </main>
-  <footer class="py-6 border-t border-gray-800 text-center text-gray-500">
-    &copy; 2025 [Nama Anda]. Dibuat dengan HTML, TailwindCSS, dan JavaScript.
+
+  <footer class="py-8 border-t border-white/10 text-center text-slate-500">
+    <div class="w-full max-w-6xl mx-auto px-4">
+        <p>&copy; 2025 Rachmad Augy</p>
+    </div>
   </footer>
+
   <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      offset: 100,
+    });
+  </script>
 </body>
-</html> 
+</html>

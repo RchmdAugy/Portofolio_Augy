@@ -1,0 +1,125 @@
+/* custom.css */
+
+/* Definisikan variabel warna dan font untuk kemudahan kustomisasi */
+:root {
+  --color-primary-bg: #0A192F; /* Warna latar utama (biru gelap) */
+  --color-secondary-bg: #112240; /* Warna latar sekunder */
+  --color-accent: #64FFDA; /* Warna aksen (sian terang) */
+  --color-text-primary: #CCD6F6; /* Warna teks utama (putih kebiruan) */
+  --color-text-secondary: #8892B0; /* Warna teks sekunder (abu-abu kebiruan) */
+  --font-primary: 'Poppins', sans-serif;
+}
+
+/* Terapkan gaya dasar ke body */
+body {
+  background-color: var(--color-primary-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+}
+
+/* Animasi fade-in */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+/* Animasi floating yang lebih halus */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Gradient teks yang lebih menarik */
+.animate-text-gradient {
+  background-image: linear-gradient(90deg, #FFFFFF, #E0E7FF, var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Kartu glassmorphism yang disempurnakan */
+.glass-card {
+  background: rgba(17, 34, 64, 0.6); /* Lebih transparan dengan warna dasar */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Judul untuk setiap seksi */
+.section-title {
+  text-align: center;
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  margin-bottom: 3rem; /* 48px */
+  color: white;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Kartu untuk menampilkan ikon keahlian */
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+  background-color: var(--color-secondary-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+/* Input form kontak */
+.contact-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-secondary-bg);
+  border: 1px solid #283a5e;
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.3);
+}
