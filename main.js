@@ -36,9 +36,13 @@ function renderProjects() {
     el.setAttribute('data-aos-delay', String(i * 100));
     
     el.innerHTML = `
-      <img src="${proj.image}" alt="Ikon Proyek ${proj.title}" class="w-full h-48 object-cover rounded-xl mb-6 shadow-lg">
-      <h3 class="text-xl font-bold mb-2 text-white">${proj.title}</h3>
+      <a href="${proj.image}" target="_blank" rel="noopener noreferrer" class="block w-full mb-6">
+        <img src="${proj.image}" alt="Gambar Proyek ${proj.title}" class="w-full h-48 object-cover rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+      </a>
+      
+      <h3 class="text-2xl font-bold mb-3 text-white leading-tight">${proj.title}</h3>
       <p class="text-slate-400 mb-4 text-sm flex-grow">${proj.description}</p>
+      
       <div class="flex flex-wrap gap-2 justify-center mb-6">
         ${proj.stack.map(s => `<span class='bg-slate-700 px-3 py-1 rounded-full text-xs font-semibold text-cyan-300'>${s}</span>`).join('')}
       </div>
